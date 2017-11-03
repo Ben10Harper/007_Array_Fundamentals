@@ -14,7 +14,7 @@ public class ArrayFun {
 		msgArray[4] = "-- other way is to set size from initial data {n1,n2,..}\\";
 		msgArray[5] = "Dynamic - when program is running:";
 		msgArray[6] = "Can NOT NOT NO WAY NO HOW change SIZE of the array!!";
-		msgArray[7] = "But OF COURSE you vsn change values!";
+		msgArray[7] = "But OF COURSE you can change values!";
 		
 		JOptionPane.showMessageDialog(null, msgArray);
 		
