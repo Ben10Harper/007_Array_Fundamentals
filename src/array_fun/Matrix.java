@@ -1,6 +1,11 @@
 package array_fun;
 
+import java.util.Scanner;
+
 public class Matrix {
+	
+	Scanner kbd = new Scanner(System.in);
+	Boolean end = false;
 	
 	private int[][] ticTacToe = {
 			{00,01,02},
@@ -99,7 +104,110 @@ public class Matrix {
 			System.out.println();
 		}
 		//////////////////END OF TESTING/////////////////////
+		realGame[1][1] = '-';
+		realGame[1][2] = '-';
+		realGame[1][0] = '-';
+		realGame[2][0] = '-';
+		realGame[2][2] = '-';
+		realGame[2][1] = '-';
+		realGame[0][2] = '-';
+		realGame[0][0] = '-';
+		realGame[0][1] = '-';
+		System.out.println();
+		for (int row = 0; row < realGame.length; row++) {
+			for (int col = 0; col < realGame[0].length; col++) {
 		
+			System.out.print(realGame[row][col]+" ");
+			
+			}
+			System.out.println();
+		}
+		while (end == false) {
+		System.out.println("X player: please choose a row");
+		int xRow = kbd.nextInt();
+		System.out.println("X player: please choose a col");
+		int xCol = kbd.nextInt();
+		realGame[xRow][xCol] = 'X';
+		for (int row = 0; row < realGame.length; row++) {
+			for (int col = 0; col < realGame[0].length; col++) {
+		
+			System.out.print(realGame[row][col]+" ");
+			
+			}
+			System.out.println();
+		}
+		if (realGame[0][0]==realGame[0][1]&&realGame[0][0]==realGame[0][2]&&realGame[0][0]=='X') {
+			System.out.println("X player wins!");
+			end = true;
+		}else if (realGame[1][0]==realGame[1][1]&&realGame[1][0]==realGame[1][2]&&realGame[1][0]=='X') {
+			System.out.println("X player wins!");
+			end = true;
+		}else if (realGame[2][0]==realGame[2][1]&&realGame[2][0]==realGame[2][2]&&realGame[2][0]=='X') {
+			System.out.println("X player wins!");
+			end = true;
+		}else if (realGame[0][0]==realGame[1][0]&&realGame[0][0]==realGame[2][0]&&realGame[0][0]=='X') {
+			System.out.println("X player wins!");
+			end = true;
+		}else if (realGame[0][1]==realGame[1][1]&&realGame[0][1]==realGame[2][1]&&realGame[0][1]=='X') {
+			System.out.println("X player wins!");
+			end = true;
+		}else if (realGame[0][2]==realGame[1][2]&&realGame[0][2]==realGame[2][2]&&realGame[0][2]=='X') {
+			System.out.println("X player wins!");
+			end = true;
+		}else if (realGame[0][0]==realGame[1][1]&&realGame[0][0]==realGame[2][2]&&realGame[0][0]=='X') {
+			System.out.println("X player wins!");
+			end = true;
+		}else if (realGame[0][2]==realGame[1][1]&&realGame[0][2]==realGame[2][0]&&realGame[0][2]=='X') {
+			System.out.println("X player wins!");
+			end = true;
+		}else if (realGame[0][0]!='-'&&realGame[0][1]!='-'&&realGame[0][2]!='-'&&realGame[1][0]!='-'&&realGame[1][1]!='-'&&realGame[1][2]!='-'&&realGame[2][0]!='-'&&realGame[2][1]!='-'&&realGame[2][2]!='-') {
+			System.out.println("No winner, the game is a tie!");	
+		}else {
+			System.out.println("No winner yet!");
+		}
+		System.out.println("O player: please choose a row");
+		int oRow = kbd.nextInt();
+		System.out.println("O player: please choose a col");
+		int oCol = kbd.nextInt();
+		realGame[oRow][oCol] = 'O';
+		for (int row = 0; row < realGame.length; row++) {
+			for (int col = 0; col < realGame[0].length; col++) {
+		
+			System.out.print(realGame[row][col]+" ");
+			
+			}
+			System.out.println();
+		}
+		if (realGame[0][0]==realGame[0][1]&&realGame[0][0]==realGame[0][2]&&realGame[0][0]=='O') {
+			System.out.println("O player wins!");
+			end = true;
+		}else if (realGame[1][0]==realGame[1][1]&&realGame[1][0]==realGame[1][2]&&realGame[1][0]=='O') {
+			System.out.println("O player wins!");
+			end = true;
+		}else if (realGame[2][0]==realGame[2][1]&&realGame[2][0]==realGame[2][2]&&realGame[2][0]=='O') {
+			System.out.println("O player wins!");
+			end = true;
+		}else if (realGame[0][0]==realGame[1][0]&&realGame[0][0]==realGame[2][0]&&realGame[0][0]=='O') {
+			System.out.println("O player wins!");
+			end = true;
+		}else if (realGame[0][1]==realGame[1][1]&&realGame[0][1]==realGame[2][1]&&realGame[0][1]=='O') {
+			System.out.println("O player wins!");
+			end = true;
+		}else if (realGame[0][2]==realGame[1][2]&&realGame[0][2]==realGame[2][2]&&realGame[0][2]=='O') {
+			System.out.println("O player wins!");
+			end = true;
+		}else if (realGame[0][0]==realGame[1][1]&&realGame[0][0]==realGame[2][2]&&realGame[0][0]=='O') {
+			System.out.println("O player wins!");
+			end = true;
+		}else if (realGame[0][2]==realGame[1][1]&&realGame[0][2]==realGame[2][0]&&realGame[0][2]=='O') {
+			System.out.println("O player wins!");
+			end = true;
+		}else if (realGame[0][0]!='-'&&realGame[0][1]!='-'&&realGame[0][2]!='-'&&realGame[1][0]!='-'&&realGame[1][1]!='-'&&realGame[1][2]!='-'&&realGame[2][0]!='-'&&realGame[2][1]!='-'&&realGame[2][2]!='-') {
+			System.out.println("No winner, the game is a tie!");	
+		}else {
+			System.out.println("No winner yet!");
+		}
+		} //end of while loop
 	} //end of gameBoard
 
 } //end of Matrix class
