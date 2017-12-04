@@ -161,7 +161,8 @@ public class Matrix {
 			System.out.println("X player wins!");
 			end = true;
 		}else if (realGame[0][0]!='-'&&realGame[0][1]!='-'&&realGame[0][2]!='-'&&realGame[1][0]!='-'&&realGame[1][1]!='-'&&realGame[1][2]!='-'&&realGame[2][0]!='-'&&realGame[2][1]!='-'&&realGame[2][2]!='-') {
-			System.out.println("No winner, the game is a tie!");	
+			System.out.println("No winner, the game is a tie!");
+			end = true;
 		}else {
 			System.out.println("No winner yet!");
 		}
@@ -203,7 +204,8 @@ public class Matrix {
 			System.out.println("O player wins!");
 			end = true;
 		}else if (realGame[0][0]!='-'&&realGame[0][1]!='-'&&realGame[0][2]!='-'&&realGame[1][0]!='-'&&realGame[1][1]!='-'&&realGame[1][2]!='-'&&realGame[2][0]!='-'&&realGame[2][1]!='-'&&realGame[2][2]!='-') {
-			System.out.println("No winner, the game is a tie!");	
+			System.out.println("No winner, the game is a tie!");
+			end = true;
 		}else {
 			System.out.println("No winner yet!");
 		}
